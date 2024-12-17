@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StreamQash Agencies is your trusted platform for unlocking financial freedom and endless earning opportunities. Powered by SMARTTECH MANAGEMENT, we provide innovative ways to earn, including affiliate marketing, video engagement, trivia questions, ad clicking, and more. Join us today for instant rewards, 24/7 support, and a seamless user experience.">
+  <meta name="keywords" content="StreamQash, StreamQash Agencies Kenya, SMARTTECH MANAGEMENT, online earning Kenya, affiliate marketing Kenya, trivia questions, video engagement, ad clicking platform, earning opportunities Kenya, financial freedom platform, modern earning website, StreamQash Agencies Ghana">
+  <meta property="og:title" content="StreamQash Agencies - Unlock Financial Freedom">
+  <meta property="og:description" content="Join StreamQash and explore diverse ways to earn online. From affiliate marketing to video engagement, we empower you to achieve financial freedom effortlessly.">
+  <meta property="og:image" content="file.webp">
+  <meta property="og:url" content="https://streamwa-ve.github.io">
+  <meta property="og:type" content="website">
+  <meta name="twitter:title" content="StreamQash Agencies">
+  <meta name="twitter:description" content="Discover innovative earning opportunities with StreamQash. Register today for instant rewards and financial growth!">
+  <meta name="twitter:image" content="file.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>STREAMQASH AGENCIES</title>
+  <link rel="stylesheet" href="st.css">
+  <style>
+      /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+.header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #630004;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            transition: background-color 0.5s ease;
+        }
+
+        .header logo {
+            font-size: 2.5rem;
+            color: #ffbe0b;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .header logo:hover {
+            transform: scale(1.1);
+        }
+
+        .header .hamburger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  left: -250px; /* Initially off-screen */
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #410073;
+  color: white;
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 9998;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu ul li {
+  padding: 10px 0;
+}
+
+.side-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.side-menu ul li a:hover {
+  color: #ff5722;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Make hamburger menu visible */
+.hamburger-menu {
+    display: block; /* Show hamburger on small screens */
+    font-size: 2rem; /* Set a larger size for the hamburger icon */
+    padding: px; /* Add padding for better touch interaction */
+
+  }
+
+  /* Adjust the side menu when it's active */
+  .side-menu.active {
+    left: 0; /* Slide in the side menu */
+  }
+
+  /* Adjust header styling for small screens */
+  .header {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Keep the register button visible on small screens */
+  .register-btn {
+    display: block;  /* Ensure the register button is visible on mobile */
+  }
+
+  /* Optional: Adjust register button style for smaller screens */
+  .register-btn {
+    font-size: 1rem;  /* Smaller font size for mobile */
+    padding: 8px 15px;
+  }
+}
+.top-buttons {
+
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+           
+        }
+
+        .top-buttons a {
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #2b96ff, #006cff);
+            color: #26ff00;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 10px #50ff00, 0 0 40px #50ff00;
+    color: #ffffff;
+        }
+
+        .top-buttons a:hover {
+            background-color: #ffd60a;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        }
+/* WELCOME SECTION */
+.welcome {
+  background: url('background.jpg') no-repeat center center/cover;
+  color: #26ff00;
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeInUp 2s ease-in; /* Apply new fadeInUp animation */
+  background-size: cover;
+  border-radius: 20px;
+}
+
+/* Heading styling */
+.welcome h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #8fff00;
+  opacity: 0; /* Make text initially invisible */
+  animation: fadeInUp 2s ease-in forwards; /* Animation for text */
+}
+
+/* Paragraph styling */
+.welcome p {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0; /* Make text initially invisible */
+  animation: fadeInUp 2s ease-in 0.5s forwards; /* Animation for paragraph with delay */
+}
+
+/* ANIMATION - Fade In and Slide Up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start with the text slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End with the text in its normal position */
+  }
+}
+/* ABOUT SECTION */
+.about {
+  padding: 60px 20px;
+  background: #ffffea;
+  text-align: center;
+  margin-top: 80px;
+  border-radius: 20px;
+}
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.about p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Features Section */
+#features {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature {
+    background: linear-gradient(to right, #eaffea, #d5f4ff);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+/* AUDIO SECTION */
+.audio {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.audio h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+/* Individual Audio Track Styling */
+.audio-track {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.audio-track h3 {
+  color: #007bff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.audio-track audio {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for Audio Track */
+.audio-track:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+}
+
+/* "More Audios" Button */
+.more-audios-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.more-audios-btn:hover {
+  background-color: #0056b3;
+}
+
+.more-audios-btn:focus {
+  outline: none;
+}
+
+/* Additional Audio Tracks (Hidden by default) */
+.extra-audios {
+  display: none;
+  margin-top: 20px;
+}
+
+.extra-audios .audio-track {
+  margin-top: 15px;
+}
+
+/* Show extra audio tracks when button is clicked */
+.more-audios-btn.active + .extra-audios {
+  display: block;
+  animation: fadeInUp 1s ease-in;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation for sliding up effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BUTTONS */
+.register-main, .whatsapp-btn {
+  background: #009202;
+  color: white;
+  padding: 20px 30px;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 10px 10px;
+  gap: 20px;
+}
+.register-main:hover, .whatsapp-btn:hover {
+  background: #e64a19;
+}
+
+/* WHY CHOOSE US SECTION */
+/* Why Choose Us Section */
+#advantages {
+    padding: 80px 20px;
+    background: #eaffff;
+    color: #00063c;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#advantages h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#advantages ul {
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 2;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+#advantages li {
+    background-color: #eaffea;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    transition: transform 0.3s ease-in-out;
+    width: 350px;
+    text-align: center;
+}
+
+#advantages li:hover {
+    transform: scale(1.05);
+}
+
+#advantages li strong {
+    color: #ff000a ;
+    font-size: 20px;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials {
+  padding: 60px 20px;
+  background: #f1f1f1;
+  text-align: center;
+  border-radius: 20px;
+}
+.testimonial {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+/* FAQ SECTION */
+.faq {
+  padding: 60px 20px;
+  background: linear-gradient(#d5f4ff, #fff4d5);
+  border-radius: 20px;
+}
+.faq h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.faq-item {
+  margin-bottom: 20px;
+}
+.faq-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.faq-item p {
+  font-size: 1.1rem;
+}
+
+/* General Styles for the Gallery Section */
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+/* Gallery Heading */
+.gallery h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Gallery container layout with CSS Grid */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Gallery item styling */
+.gallery-item {
+  background-color: eaffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Image styling within the gallery items */
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect - Grow image and increase shadow */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+/* Hover Effect for the images */
+.gallery-item:hover img {
+  transform: scale(1.1); /* Zoom in the image */
+}
+
+/* Text under images styling */
+.gallery-item p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 10px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for text */
+.gallery-item:hover p {
+  color: #007bff; /* Change text color when hovered */
+}
+
+/* Animation for Gallery items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the fadeInUp animation to each gallery item */
+.gallery-item {
+  animation: fadeInUp 0.8s ease-out;
+  animation-delay: 0.2s;
+}
+ 
+.gallery-item:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.gallery-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.gallery-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.gallery-item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item p {
+    font-size: 1rem;
+  }
+}
+
+/* CONTACT SECTION */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.contact .whatsapp-btn {
+  margin-top: 20px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+  position: ;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.cta-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.get-started-btn {
+    display: inline-block;
+    padding: 25px 60px;
+    background-color: #0003ff;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.4s, transform 0.3s;
+}
+
+.get-started-btn:hover {
+    background-color: #3a86ff;
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .get-started-btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header .logo {
+    font-size: 1.5rem;
+  }
+  .side-menu {
+    width: 200px;
+  }
+  .feature-block, .why-block {
+    flex: 1 1 45%;
+  }
+  .testimonial {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .top-buttons {
+                top: 60px;
+            }
+
+            .top-buttons a {
+                padding: 6px 10px;
+            }
+        }
+@media screen and (max-width: 768px) {
+   
+            .top-buttons {
+                flex-direction: column;
+                top: 80px;
+                right: 10px;
+            }
+
+            .top-buttons a {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+        }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+ <!-- HEADER SECTION -->
+<div class="header">
+  <div class="logo"><strong>STREAMQASH</strong></div>
+  
+<div class="top-buttons">
+      
+        <a href="https://www.streamwa-ve.com/user/register.php?ref=Bee254">Register</a>
+    </div>
+
+  </header>
+  
+  <div class="hamburger-menu" id="hamburgerMenu" onclick="toggleMenu()">&#9776;</div>
+  </div>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="sideMenu">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="https://www.streamwa-ve.com/user/register.php?ref=Bee254">Create account now</a></li>
+    <li><a href="#about">What is StreamQash?</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+</div>
+
+
+  <!-- WELCOME SECTION -->
+  <section id="welcome" class="welcome">
+    <h1>Welcome to StreamQash Agencies</h1>
+    <p><strong>The ultimate platform designed to help you unlock endless earning opportunities. Join a growing community, explore exciting features, and start your journey to financial success today!</strong></p>
+     <div class="cta-container">
+            <a href="https://www.streamwa-ve.com/user/register.php?ref=Bee254" class="get-started-btn">Get Started</a>
+        </div>
+  </section>
+
+  <!-- WHAT IS STREAMQASH SECTION -->
+  <section id="about" class="about">
+    <h2>What is StreamQash?</h2>
+    <p>StreamQash is a dynamic platform offering innovative ways to earn and grow. Explore the features and audio summaries below to discover how StreamQash can work for you!</p>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section id="features">
+        <div class="container">
+            <h2 class="fade-in">How You Can Earn</h2>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature bounce-in">
+                   
+                    <h3>PROMOTED ADS</h3>
+                    <p>Earn effortlessly by interacting with targeted advertisements displayed on your personalized dashboard.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature bounce-in">
+                        
+                    <h3>WATCH VIDEOS</h3>
+                    <p>Turn your screen time into income! StreamQash partners with various video platforms to bring you opportunities to earn rewards.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature bounce-in">
+                    
+                    <h3>TAKE QUIZZES</h3>
+                    <p>Test your knowledge by answering tailored trivia questions and receive rewards for accurate responses!</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature bounce-in">
+                   
+                    <h3>E-books & Forex Signals</h3>
+                    <p>Access free and premium e-books and advanced Forex signals to expand your skills and trading knowledge! </p>
+                </div>
+                <div class="feature bounce-in">
+                        
+                    <h3>AFFILIATE MARKETING</h3>
+                    <p>Monetize your efforts by promoting StreamQash and earn rewards through a structured, multi-level commission system!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- AUDIO SUMMARIES SECTION -->
+  <section id="audio" class="audio">
+  <h2>Audio Summaries</h2>
+  
+  <div class="audio-track">
+    <h3>Kenya Summary</h3>
+    <audio controls>
+      <source src="Ksummary.opus">
+    </audio>
+  </div>
+  
+  <div class="audio-track">
+    <h3>Ghana Summary</h3>
+    <audio controls>
+      <source src="Gsummary.opus">
+    </audio>
+  </div>
+  
+  <!-- More audios button -->
+  <button class="more-audios-btn">More Audios</button>
+  
+  <!-- Additional Audio Sections (hidden by default) -->
+  <div class="extra-audios">
+    <div class="audio-track">
+      <h3>Nigeria Summary</h3>
+      <audio controls>
+        <source src="Nsummary.opus">
+      </audio>
+    </div>
+    <div class="audio-track">
+      <h3>South Africa Summary</h3>
+      <audio controls>
+        <source src="SAsummary.opus">
+      </audio>
+    </div>
+  </div>
+</section>
+
+  <!-- REGISTER AND WHATSAPP BUTTONS -->
+  <section class="register">
+    <a href="https://www.streamwa-ve.com/user/register.php?ref=Bee254">
+  <button class="register-main">Register</button>
+</a>
+    <a href="https://api.whatsapp.com/send?phone=+254796037268&text=Hey+there+tell+me+more+about+StreamQash">
+  <button class="whatsapp-btn">Whatsapp us</button>
+</a>
+  </section>
+
+  <!-- WHY CHOOSE US SECTION -->
+ <section id="advantages">
+        <div class="container">
+            <h2 class="fade-in">Why Choose StreamQash?</h2>
+            <ul>
+                <li><strong>Reliable Earnings:</strong> StreamQash offers multiple income-generating options, including ads clicking, video watching, and surveys.</li>
+                <li><strong>Global Reach:</strong> No matter where you are, StreamQash is available worldwide, making it easy for you to participate and earn.</li>
+                <li><strong>Fast Payouts:</strong> Once you start earning, you can quickly withdraw your earnings to your preferred payment method including PayPal, momo, Mpesa, Airtel money and many more.</li>
+                <li><strong>24/7 Support:</strong> Our support team is always available to assist you with any questions or issues you may have.</li>
+                
+            </ul>
+        </div>
+    </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Members Say</h2>
+    <div class="testimonial"><p>"StreamQash has transformed my life! So easy and reliable."- <strong>Mentor Hayami</strong> </p></div>
+    <div class="testimonial"><p>"I earn consistently every day. Best decision ever!"- <strong>RAYASTAMENTS</strong></p></div>
+    <div class="testimonial"><p>"Excellent platform with great customer service."- <strong>Nana🇬🇭</strong></p></div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is StreamQash?</h3>
+      <p>StreamQash is an innovative platform offering various ways to earn and grow financially.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I register?</h3>
+      <p>You can register easily by clicking the register button above and following the instructions.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is there a customer support team?</h3>
+      <p>Yes, we provide 24/7 customer support to assist you anytime.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+ <section id="gallery" class="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-container">
+      <div class="gallery-item">
+      <img src="certificate.jpg" alt="Business Certificate">
+      <p>Government Business registration Certificate</p>
+    </div>
+    <div class="gallery-item">
+      <img src="Photo_1734294677707.jpg" alt="Our team">
+      <p>Some of our members</p>
+    </div>
+    <div class="gallery-item">
+      <img src="Photo_1734294974368.jpg" alt="Team">
+      <p>Team smarttech celebrating their success</p>
+    </div>
+    <div class="gallery-item">
+      <img src="backgroundimage.jpeg" alt="Team Member 3">
+      <p>Some of the team</p>
+    </div>
+    
+  </div>
+</section>
+
+  <!-- CONTACT US SECTION -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Call or WhatsApp us at: <strong>+254 748 000578</strong></p>
+    <a href="https://api.whatsapp.com/send?phone=+254796037268&text=Hey+there+tell+me+more+about+StreamQash">
+  <button class="whatsapp-btn">Whatsapp us</button>
+</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2024 StreamQash Agencies. All rights reserved.</p>
+  </footer>
+  <script>
+     // Function to toggle the side menu
+function toggleMenu() {
+  const sideMenu = document.getElementById('sideMenu');
+  sideMenu.classList.toggle('active');  // Toggle the 'active' class to open/close the menu
+
+
+};
+// Track WhatsApp Button Click
+document.querySelectorAll('.whatsapp-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    console.log('WhatsApp button clicked');
+    trackEvent('Button', 'WhatsApp', 'User clicked WhatsApp button');
+  });
+});
+
+// Example Analytics Tracking Function
+function trackEvent(category, action, label) {
+  if (window.gtag) {
+    gtag('event', action, {
+      event_category: category,
+      event_label: label,
+    });
+  } else {
+    console.log(`Event Tracked: ${category} - ${action} - ${label}`);
+  }
+}
+// JavaScript to toggle the visibility of extra audio tracks
+document.querySelector('.more-audios-btn').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+  </script>
+
+</body>
+</html>
